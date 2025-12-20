@@ -1,0 +1,65 @@
+1. Models (LLM Wrappers)
+Provides a unified interface to interact with various LLM providers (OpenAI, Anthropic, Cohere, Hugging Face, etc.).
+
+Includes:
+
+LLMs: Text-in, text-out models.
+
+ChatModels: Message-in, message-out models (structured conversation).
+
+Embeddings: For text embedding models.
+
+2. Prompts
+Manages prompt templates and few-shot examples.
+
+Allows dynamic prompt generation using template variables.
+
+Includes output parsers to structure model responses.
+
+Example: PromptTemplate, ChatPromptTemplate, FewShotPromptTemplate.
+
+3. Indexes
+Helps load, structure, and index external data for retrieval.
+
+Includes:
+
+Document Loaders: From various sources (PDFs, websites, etc.).
+
+Text Splitters: For chunking long documents.
+
+Vector Stores integration: FAISS, Pinecone, Chroma.
+
+Retrievers: Fetch relevant documents for QA.
+
+4. Memory
+Adds statefulness to chains/agents by remembering past interactions.
+
+Types: ConversationBufferMemory, ConversationBufferWindowMemory, EntityMemory, etc.
+
+Stores and retrieves chat history or relevant context.
+
+5. Chains
+Orchestrates sequences of calls to models, tools, or other chains.
+
+Pre-built chains for common tasks:
+
+LLMChain (basic prompt + LLM call)
+
+SequentialChain (multiple steps)
+
+RetrievalQA (retrieval + QA)
+
+ConversationChain (with memory)
+
+Also allows building custom chains.
+
+6. Agents
+Enables LLMs to make decisions, use tools, and take actions.
+
+Agent Executor runs the agent loop:
+
+Decide tool → Use tool → Observe output → Repeat.
+
+Tools can be search engines, calculators, APIs, etc.
+
+Includes pre-built agents: Zero-shot, ReAct, Self-ask-with-search, etc.
