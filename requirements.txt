@@ -1,0 +1,23 @@
+# Core LangChain 
+langchain
+langchain-core 
+
+# OpenAI
+langchain-openai 
+openai
+
+# Anthropic
+langchain-anthropic 
+
+# Google Gemini (REQUIRED BOTH) 
+langchain-google-genai
+google-generativeai 
+google-ai-generativelanguage
+ 
+# Hugging Face
+langchain-huggingface 
+transformers
+huggingface-hub
+
+# Env management 
+python-dotenv
