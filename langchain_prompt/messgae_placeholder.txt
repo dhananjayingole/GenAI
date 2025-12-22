@@ -1,0 +1,63 @@
+1️⃣ Problem you’re solving (in simple words)
+
+Right now:
+
+Your chatbot does remember because you manually append messages to chat_history
+
+But:
+
+The logic is mixed with runtime code
+
+Not reusable
+
+Harder to scale (DB memory, Redis, sessions, etc.)
+
+What you want:
+
+When the user says
+“I want a refund for order #12345”
+and after 2 days asks
+“What happened to my refund?”
+
+👉 The model should see previous context automatically
+
+That’s where ChatPromptTemplate + MessagesPlaceholder shine.
+
+2️⃣ What are ChatPromptTemplate & MessagesPlaceholder?
+🔹 ChatPromptTemplate
+
+It defines how the prompt is constructed every time the model is called.
+
+Think of it as:
+
+“This is the structure of every request I send to the LLM.”
+
+🔹 MessagesPlaceholder
+
+It is a slot where entire conversation history is injected.
+
+System message
+⬇
+Conversation history (many messages)
+⬇
+New user message
+
+
+So instead of manually appending messages into a list everywhere, LangChain handles it cleanly.
+
+3️⃣ Conceptual Flow (Very Important)
+User → asks question
+       ↓
+ChatPromptTemplate builds messages:
+    - SystemMessage
+    - chat_history (MessagesPlaceholder)
+    - HumanMessage (current input)
+       ↓
+LLM sees FULL conversation
+       ↓
+AI replies using context
+       ↓
+We store the new messages
+
+
+This is exactly how real customer-support bots work.
