@@ -1,0 +1,3 @@
+# output parser in langchain help convert raw LLm responses into 
+# structured formats like JSON, CSV, Pydantic models, and more.They ensure consistency,
+# validiation and ease of use in applications.
