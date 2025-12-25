@@ -10,7 +10,6 @@ from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 from typing import Literal
 
-
 # Load environment variables
 load_dotenv()
 
