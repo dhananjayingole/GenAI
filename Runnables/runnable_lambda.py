@@ -8,6 +8,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableSequence,RunnableParallel,RunnablePassthrough, RunnableLambda
 
 load_dotenv()
+
 # let make a function.
 def word_count(text):
     count = len(text.split())
@@ -42,4 +43,3 @@ parallel_chain = RunnableParallel({
 final_chain = RunnableSequence(joke_gen_chain, parallel_chain)
 
 result = print(final_chain.invoke({'topic':'AI'}))
-

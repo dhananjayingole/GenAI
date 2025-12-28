@@ -1,0 +1,7 @@
+Document loader are the  Component in langchain used to load data from various sources into a standardized format, 
+which can then be used for chunking embedding, retrival and generation.
+
+Document(
+    page_content="the actual text content",
+    metadata = {"source": "filename.pdf",...}
+)
