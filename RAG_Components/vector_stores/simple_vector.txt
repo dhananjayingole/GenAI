@@ -1,0 +1,5 @@
+# to transform all the text into number or vectors.
+# vector store help to resolve the challenges like generating embedding vectors, storage, sementic search intelligence.
+# it is a system designed to store and retirive data represented as numerical vectors.
+-> to install chromadb 
+pip install langchain chromadb sentence-transformers langchain-huggingface langchain-community pypdf
