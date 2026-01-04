@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 
-# LangChain Models
+# LangChain Models using
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 
