@@ -1,6 +1,4 @@
-# import langchain 
 
-# print(langchain.__version__)
 
 import google.generativeai as genai
 from dotenv import load_dotenv
